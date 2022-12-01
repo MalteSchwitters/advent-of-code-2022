@@ -1,0 +1,13 @@
+[package]
+name = "advent-of-code-2022"
+version = "0.1.0"
+edition = "2021"
+authors = ["Malte Schwitters <malte.schwitters@worldiety.de>"]
+
+[dependencies]
+env_logger = "0.9" # log implementation
+log = "0.4" # logging facade
+
+[[bin]]
+path = "src/main.rs"
+name = "advent_of_code"
