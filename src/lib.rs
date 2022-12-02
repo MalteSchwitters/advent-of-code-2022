@@ -1,8 +1,9 @@
 mod day1;
+mod day2;
 
 pub fn run() -> Result<(), String> {
     init_log("debug");
-    day1::solvePuzzle();
+    day2::solvePuzzle();
     Ok(())
 }
 
