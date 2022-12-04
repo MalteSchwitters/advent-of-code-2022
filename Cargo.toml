@@ -7,6 +7,7 @@ authors = ["Malte Schwitters <malte.schwitters@worldiety.de>"]
 [dependencies]
 env_logger = "0.9" # log implementation
 log = "0.4" # logging facade
+regex = "1.7.0"
 
 [[bin]]
 path = "src/main.rs"

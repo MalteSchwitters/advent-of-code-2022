@@ -1,10 +1,11 @@
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 pub fn run() -> Result<(), String> {
     init_log("debug");
-    day3::solvePuzzle();
+    day4::solvePuzzle();
     Ok(())
 }
 
