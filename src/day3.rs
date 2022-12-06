@@ -52,7 +52,7 @@ fn group(strs: Vec<&str>) -> Vec<Vec<&str>> {
     let mut groups: Vec<Vec<&str>> = vec![vec![]];
     for (i, v) in strs.iter().enumerate() {
         let group_index = i / 3;
-        if (groups.len() <= group_index) {
+        if groups.len() <= group_index {
             groups.push(vec![]);
         }
         groups[group_index].push(v);

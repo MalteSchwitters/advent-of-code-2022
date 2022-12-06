@@ -1,5 +1,5 @@
 use regex::Regex;
-use std::{fs, vec};
+use std::fs;
 
 pub fn solvePuzzle() {
     log::debug!("Solving Day 4");
