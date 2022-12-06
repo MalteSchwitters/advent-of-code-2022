@@ -1,7 +1,8 @@
 use regex::Regex;
 use std::fs;
 
-pub fn solvePuzzle() {
+pub fn solve_puzzle() {
+    log::debug!("-------------");
     log::debug!("Solving Day 4");
     let input = fs::read_to_string("./inputs/day4.txt").unwrap();
     let seperator = Regex::new(r"([ ,-]+)").expect("Invalid regex");
@@ -20,13 +21,13 @@ pub fn solvePuzzle() {
         .iter()
         .filter(|v| has_full_overlap(v))
         .count();
-    log::debug!("Part 1: {}", part1);
+    log::info!("Part 1: {}", part1);
 
     let part2 = section_assignments
         .iter()
         .filter(|v| has_overlap(v))
         .count();
-    log::debug!("Part 2: {}", part2);
+    log::info!("Part 2: {}", part2);
 }
 
 fn has_full_overlap(v: &Vec<i32>) -> bool {

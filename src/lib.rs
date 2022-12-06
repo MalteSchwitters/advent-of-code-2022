@@ -5,10 +5,14 @@ mod day4;
 mod day5;
 mod day6;
 
-pub fn run() -> Result<(), String> {
+pub fn run() {
     init_log("debug");
-    day6::solvePuzzle();
-    Ok(())
+    day1::solve_puzzle();
+    day2::solve_puzzle();
+    day3::solve_puzzle();
+    day4::solve_puzzle();
+    day5::solve_puzzle();
+    day6::solve_puzzle();
 }
 
 fn init_log(level: &str) {

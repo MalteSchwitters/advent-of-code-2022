@@ -1,6 +1,7 @@
 use std::{fs, vec};
 
-pub fn solvePuzzle() {
+pub fn solve_puzzle() {
+    log::debug!("-------------");
     log::debug!("Solving Day 3");
     let input = fs::read_to_string("./inputs/day3.txt").unwrap();
     let lines = input.split("\n").collect::<Vec<&str>>();
@@ -12,7 +13,7 @@ pub fn solvePuzzle() {
         .map(|v| map_to_priority(v))
         .sum();
 
-    log::debug!("Part 1: {}", part1);
+    log::info!("Part 1: {}", part1);
     let groups = group(lines.clone());
 
     let part2: i32 = groups
@@ -20,14 +21,12 @@ pub fn solvePuzzle() {
         .map(|strs| find_shared_char(strs))
         .map(|v| map_to_priority(v))
         .sum();
-    log::debug!("Part 2: {}", part2);
+    log::info!("Part 2: {}", part2);
 }
 
 fn find_shared_char(strs: &Vec<&str>) -> char {
     let a = strs[0];
     let bs = &strs.clone()[1..];
-    dbg!(a);
-    dbg!(bs);
     let char = a
         .chars()
         .find(|c| !bs.iter().find(|b| !b.contains(*c)).is_some());

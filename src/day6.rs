@@ -1,10 +1,11 @@
 use std::{fs, vec};
 
-pub fn solvePuzzle() {
+pub fn solve_puzzle() {
+    log::debug!("-------------");
     log::debug!("Solving Day 6");
     let input = fs::read_to_string("./inputs/day6.txt").unwrap();
-    log::debug!("Part 1: {}", find_first_distinct_characters(&input, 4) + 1);
-    log::debug!("Part 2: {}", find_first_distinct_characters(&input, 14) + 1);
+    log::info!("Part 1: {}", find_first_distinct_characters(&input, 4) + 1);
+    log::info!("Part 2: {}", find_first_distinct_characters(&input, 14) + 1);
 }
 
 fn find_first_distinct_characters(input: &String, count: usize) -> usize {

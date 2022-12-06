@@ -8,7 +8,8 @@ enum Choice {
     Scissors,
 }
 
-pub fn solvePuzzle() {
+pub fn solve_puzzle() {
+    log::debug!("-------------");
     log::debug!("Solving Day 2");
     let mut mapping_their = HashMap::new();
     mapping_their.insert('A', Choice::Rock);
@@ -27,14 +28,14 @@ pub fn solvePuzzle() {
     let part1 = parsed_input
         .clone()
         .map(|(a, b)| map_input_part_1(a, b))
-        .fold(0i32, |result, (a, b)| result + calcScore(&b, &a));
-    log::info!("Result Part 1: {}", part1);
+        .fold(0i32, |result, (a, b)| result + calc_score(&b, &a));
+    log::info!("Part 1: {}", part1);
 
     let part1 = parsed_input
         .clone()
         .map(|(a, b)| map_input_part_2(a, b))
-        .fold(0i32, |result, (a, b)| result + calcScore(&b, &a));
-    log::info!("Result Part 2: {}", part1);
+        .fold(0i32, |result, (a, b)| result + calc_score(&b, &a));
+    log::info!("Part 2: {}", part1);
 }
 
 fn map_input_part_1(a: char, b: char) -> (Choice, Choice) {
@@ -84,7 +85,7 @@ fn map_input_part_2(a: char, b: char) -> (Choice, Choice) {
     }
 }
 
-fn calcScore(mine: &Choice, theirs: &Choice) -> i32 {
+fn calc_score(mine: &Choice, theirs: &Choice) -> i32 {
     let score = match mine {
         Choice::Paper => 2,
         Choice::Rock => 1,
