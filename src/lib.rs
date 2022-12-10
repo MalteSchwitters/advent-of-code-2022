@@ -1,18 +1,30 @@
-mod day1;
-mod day2;
-mod day3;
-mod day4;
-mod day5;
-mod day6;
+mod day01;
+mod day02;
+mod day03;
+mod day04;
+mod day05;
+mod day06;
+mod day07;
+mod day08;
+mod day09;
+mod day10;
 
-pub fn run() {
+pub fn run(day: Option<u32>) {
     init_log("debug");
-    day1::solve_puzzle();
-    day2::solve_puzzle();
-    day3::solve_puzzle();
-    day4::solve_puzzle();
-    day5::solve_puzzle();
-    day6::solve_puzzle();
+    let d = day.unwrap_or(0);
+    match d {
+        1 => day01::solve_puzzle(),
+        2 => day02::solve_puzzle(),
+        3 => day03::solve_puzzle(),
+        4 => day04::solve_puzzle(),
+        5 => day05::solve_puzzle(),
+        6 => day06::solve_puzzle(),
+        7 => day07::solve_puzzle(),
+        8 => day08::solve_puzzle(),
+        9 => day09::solve_puzzle(),
+        10 => day10::solve_puzzle(),
+        _ => day10::solve_puzzle(),
+    }
 }
 
 fn init_log(level: &str) {
