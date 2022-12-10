@@ -15,7 +15,6 @@ pub fn solve_puzzle() {
     let render = render_image(&instructions);
     log::info!("Part 2:");
     print!("{}", &render);
-    //log::info!("Part 2: {}", calc_part_2(&instructions));
 }
 
 fn render_image(instructions: &Vec<Instruction>) -> String {
