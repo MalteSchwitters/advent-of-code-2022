@@ -123,28 +123,28 @@ fn move_head(head: &Coordinates, direction: &Direction) -> Coordinates {
 
 fn move_tail(tail: &Coordinates, parent: &Coordinates) -> Coordinates {
     let mut pos = tail.clone();
-    let diffY = parent.y - pos.y;
-    let diffX = parent.x - pos.x;
-    if diffY.abs() > 1 && diffX == 1 {
+    let diff_y = parent.y - pos.y;
+    let diff_x = parent.x - pos.x;
+    if diff_y.abs() > 1 && diff_x == 1 {
         pos.x += 1;
     }
-    if diffY.abs() > 1 && diffX == -1 {
+    if diff_y.abs() > 1 && diff_x == -1 {
         pos.x -= 1;
     }
-    if diffX.abs() > 1 && diffY == 1 {
+    if diff_x.abs() > 1 && diff_y == 1 {
         pos.y += 1;
     }
-    if diffX.abs() > 1 && diffY == -1 {
+    if diff_x.abs() > 1 && diff_y == -1 {
         pos.y -= 1;
     }
-    if diffX > 1 {
+    if diff_x > 1 {
         pos.x += 1;
-    } else if diffX < -1 {
+    } else if diff_x < -1 {
         pos.x -= 1;
     }
-    if diffY > 1 {
+    if diff_y > 1 {
         pos.y += 1;
-    } else if diffY < -1 {
+    } else if diff_y < -1 {
         pos.y -= 1;
     }
     pos
@@ -152,7 +152,6 @@ fn move_tail(tail: &Coordinates, parent: &Coordinates) -> Coordinates {
 
 fn parse_input() -> Vec<Movement> {
     let input = fs::read_to_string("./inputs/day09.txt").unwrap();
-    let directions: Vec<Movement> = vec![];
     input
         .split("\n")
         .map(|v| {

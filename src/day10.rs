@@ -19,7 +19,6 @@ pub fn solve_puzzle() {
 
 fn render_image(instructions: &Vec<Instruction>) -> String {
     let mut render_position = 0;
-    let mut tick = 0;
     let mut x = 1;
     let mut result = "".to_owned();
     for instruction in instructions {
@@ -30,7 +29,6 @@ fn render_image(instructions: &Vec<Instruction>) -> String {
                 result = result + ".";
             }
 
-            tick += 1;
             render_position += 1;
             if render_position > 39 {
                 render_position = 0;

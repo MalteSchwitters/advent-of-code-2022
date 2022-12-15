@@ -80,8 +80,8 @@ fn calc_visible_trees_count(forrest: [[u8; SIZE]; SIZE]) -> i32 {
         }
     }
 
-    for (row, tree_row) in visible_trees.iter().enumerate() {
-        for (col, visible) in tree_row.iter().enumerate() {
+    for (_, tree_row) in visible_trees.iter().enumerate() {
+        for (_, visible) in tree_row.iter().enumerate() {
             if *visible {
                 counter += 1;
             }

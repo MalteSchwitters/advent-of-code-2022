@@ -9,6 +9,7 @@ env_logger = "0.9" # log implementation
 log = "0.4" # logging facade
 regex = "1.7.0"
 trees = "0.2.1"
+colored = "2.0.0" # colored console output
 
 [[bin]]
 path = "src/main.rs"
