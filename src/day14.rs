@@ -22,7 +22,7 @@ fn spawn_sandcorn(map: &mut Vec<Vec<char>>) -> bool {
     let mut x: usize = 500;
     let mut y: usize = 0;
 
-    if (map[x][y] != '.') {
+    if map[x][y] != '.' {
         // stop when spawnpoint is occupied
         return false;
     }
