@@ -11,6 +11,7 @@ mod day10;
 mod day12;
 mod day14;
 mod day17;
+mod day18;
 
 pub fn run(day: Option<u32>) {
     init_log("debug");
@@ -29,7 +30,8 @@ pub fn run(day: Option<u32>) {
         12 => day12::solve_puzzle(),
         14 => day14::solve_puzzle(),
         17 => day17::solve_puzzle(),
-        _ => day17::solve_puzzle(),
+        18 => day18::solve_puzzle(),
+        _ => day18::solve_puzzle(),
     }
 }
 
