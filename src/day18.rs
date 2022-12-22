@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use std::collections::LinkedList;
-use std::{fs, vec};
+use std::fs;
 
 pub fn solve_puzzle() {
     log::debug!("-------------");
@@ -91,7 +91,7 @@ fn test_reachable_from_outside(system: &CoordinateSystem, point: &(i32, i32, i32
 }
 
 fn create_coordinate_system(verticies: &Vec<Vertex>) -> CoordinateSystem {
-    let mut system = CoordinateSystem::new(&verticies);
+    let system = CoordinateSystem::new(&verticies);
     system
 }
 
